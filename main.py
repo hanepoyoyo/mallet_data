@@ -1,18 +1,18 @@
 import os
 import subprocess
 
-import install_mecab
-import create_corpus
-import create_model
+from method import install_mecab
+from method import create_corpus
+from method import create_model
 
 # set mallet home
 mallet_home = os.path.join(os.getcwd(), 'mallet')
 os.environ['MALLET_HOME'] = mallet_home
 
 # set dir pass
-source_dir = 'source'
-corpus_dir = 'corpus'
-model_dir = 'model'
+source_dir = 'txt_source'
+corpus_dir = 'txt_corpus'
+model_dir = 'txt_model'
 os.makedirs(source_dir, exist_ok=True)
 os.makedirs(corpus_dir, exist_ok=True)
 os.makedirs(model_dir, exist_ok=True)
