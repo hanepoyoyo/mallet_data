@@ -2,19 +2,19 @@ import os
 import subprocess
 import MeCab
 
-def create_corpus(source_dir, corpus_dir):
+def create_corpus(cleansed_dir, corpus_dir):
     # create mecab tokens
     mecab = MeCab.Tagger("-Owakati")
     tokens = []
 
-    for filename in os.listdir(source_dir):
-        source_path = os.path.join(source_dir, filename)
+    for filename in os.listdir(cleansed_dir):
+        cleansed_path = os.path.join(cleansed_dir, filename)
         
         if filename.endswith(".txt"):
             # create token
-            with open(source_path, 'r', encoding='shift_jis') as f:
-                source = f.read()
-                token = mecab.parse(source).strip()
+            with open(cleansed_path, 'r', encoding='shift_jis') as f:
+                cleansed = f.read()
+                token = mecab.parse(cleansed).strip()
                 tokens.append(token)
 
     # output mecab tokens
