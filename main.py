@@ -25,7 +25,7 @@ os.system('chcp 65001')
 subprocess.call('cls', shell=True)
 
 # please comment out if you don't need install mecab
-# install_mecab.install_mecab()
+install_mecab.install_mecab()
 
 cleanse_source.cleanse_source(source_dir, cleansed_dir)
 create_corpus.create_corpus(cleansed_dir, corpus_dir)
