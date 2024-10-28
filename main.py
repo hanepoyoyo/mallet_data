@@ -2,6 +2,9 @@ import os
 import subprocess
 
 from method import install_mecab
+# please comment out if you don't need install mecab
+install_mecab.install_mecab()
+
 from method import cleanse_source
 from method import create_corpus
 from method import create_model
@@ -23,9 +26,6 @@ os.makedirs(model_dir, exist_ok=True)
 # set console encoding
 os.system('chcp 65001')
 subprocess.call('cls', shell=True)
-
-# please comment out if you don't need install mecab
-install_mecab.install_mecab()
 
 cleanse_source.cleanse_source(source_dir, cleansed_dir)
 create_corpus.create_corpus(cleansed_dir, corpus_dir)
