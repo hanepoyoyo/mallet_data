@@ -26,6 +26,7 @@
   - `cleanse_source.py`では、sourceをクレンジングする。
   - `create_corpus.py`では、コーパスを作成する。
   - `create_model.py`では、トピックモデルを作成する。
+  - `txt_to_utf-8.py`では、utf-8に直して文字化けを解決する。
 
 ### txt_...
 - テキストやコーパス、モデル等を格納する。
@@ -35,3 +36,4 @@
   - `txt_cleansed`では、クレンジングしたテキストを格納する。
   - `txt_corpus`では、mecabで処理したテキストとmallet形式のテキストを格納する。
   - `txt_model`では、トピックモデルを格納する。
+  - `txt_utf-8`では、utf-8に変換したテキストを格納する。
